@@ -22,7 +22,7 @@ dotfiles config --local status.showUntrackedFiles no
 
 Basic, pretty, fast.
 
-![screenshot](./screenshots/prompt.png)
+![screenshot](/.dotfiles/screenshots/prompt.png)
 
 ## vscode settings
 
