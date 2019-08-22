@@ -24,7 +24,7 @@ function setup-aliases() {
   alias ls='ls -lGF'
   alias dotfiles="/usr/bin/git --git-dir=$HOME/Projects/badsyntax/dotfiles/ --work-tree=$HOME"
 }
-:
+
 function setup-env() {
   export GREP_OPTIONS='--color=always'
   export EDITOR=vim
