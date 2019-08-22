@@ -10,11 +10,12 @@ My dotfiles for macOS.
 - Install git-open: `brew install git-open`
 - Upgrade bash: `brew install bash bash-completion`
 
-Link the files to your home directory:
+Clone the repo to add the dotfiles:
 
 ```bash
-git clone https://github.com/badsyntax/dotfiles.git ~/Projects/badsyntax/dotfiles
-ln -sf ~/Projects/badsyntax/dotfiles/{.bashrc,.bash_profile,.gitconfig,.vimrc,.hushlogin} ~
+git clone --bare https://github.com/badsyntax/dotfiles.git $HOME/badsyntax/dotfiles
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
 ```
 
 ## Bash prompt
