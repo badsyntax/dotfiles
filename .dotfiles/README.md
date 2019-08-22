@@ -6,9 +6,16 @@ My dotfiles for macOS.
 
 - [Install homebrew](https://brew.sh/)
 - [Install nvm](https://github.com/nvm-sh/nvm)
-- Install direnv: `brew install direnv`
-- Install git-open: `brew install git-open`
-- Upgrade bash: `brew install bash bash-completion`
+
+Install deps:
+
+```bash
+brew install \
+  direnv \
+  git-open \
+  bash \
+  bash-completion
+```
 
 Clone the repo to add the dotfiles:
 
