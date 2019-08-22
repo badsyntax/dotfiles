@@ -27,6 +27,14 @@ dotfiles config --local status.showUntrackedFiles no
 source $HOME/.bashrc
 ```
 
+Use the `dotfiles` alias to push or pull dotfile changes:
+
+```bash
+dotfiles add .bashrc
+dotfiles commit -m "Update .bashrc"
+dotfiles push
+```
+
 ## Bash prompt
 
 Basic, pretty, fast.
