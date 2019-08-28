@@ -27,12 +27,20 @@ dotfiles config --local status.showUntrackedFiles no
 source $HOME/.bashrc
 ```
 
+<details><summary>Explanation</summary>
+
+- A bare git repo is cloned to the `~/Projects` dir
+- The `dotfiles` alias is setup which uses links the bare repo to the home directory
+- Files from the bare git repo are then checked out to the home directory
+- `showUntrackedFiles` is disabled for the home directory, to hide files we are not explicitly tracking yet. This is so when you type `dotfiles status` and other commands, files you are not interested in tracking will not show up as untracked.
+  </details>
+
 Create your user specific `.gitconfig` for the purpose of setting your git user:
 
 ```bash
 echo "[user]
   name = Richard Willis
-  email = email@example.com
+  email = willis.rh@gmail.com
 " > ~/.gituser
 ```
 
