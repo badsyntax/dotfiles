@@ -17,7 +17,7 @@ brew install \
   bash-completion
 ```
 
-Clone the repo to add the dotfiles:
+Clone the repo to add the dotfiles to your home directory:
 
 ```bash
 git clone --bare https://github.com/badsyntax/dotfiles.git $HOME/Projects/badsyntax/dotfiles
@@ -27,13 +27,28 @@ dotfiles config --local status.showUntrackedFiles no
 source $HOME/.bashrc
 ```
 
+Create your user specific `.gitconfig` for the purpose of setting your git user:
+
+```bash
+echo "[user]
+  name = Richard Willis
+  email = email@example.com
+" > ~/.gituser
+```
+
+## Usage
+
 Use the `dotfiles` alias to push or pull dotfile changes:
 
 ```bash
+cd ~
+dotfiles status
 dotfiles add .bashrc
 dotfiles commit -m "Update .bashrc"
 dotfiles push
 ```
+
+_As you can see, the `dotfiles` alias is just git._
 
 ## Bash prompt
 

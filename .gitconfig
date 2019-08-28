@@ -1,6 +1,5 @@
-[user]
-  name = Richard Willis
-  email = willis.rh@gmail.com
+[include]
+  path = ~/.gituser
 
 [color]
   ui = auto
