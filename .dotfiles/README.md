@@ -23,17 +23,9 @@ Clone the repo to add the dotfiles to your home directory:
 git clone --bare https://github.com/badsyntax/dotfiles.git $HOME/Projects/badsyntax/dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/Projects/badsyntax/dotfiles/ --work-tree=$HOME"
 dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
+dotfiles config --local status.showUntrackedFiles no # don't show untracked files when doing `git status`
 source $HOME/.bashrc
 ```
-
-<details><summary>Explanation</summary>
-
-- A bare git repo is cloned to the `~/Projects` dir
-- The `dotfiles` alias is setup which uses links the bare repo to the home directory
-- Files from the bare git repo are then checked out to the home directory
-- `showUntrackedFiles` is disabled for the home directory, to hide files we are not explicitly tracking yet. This is so when you type `dotfiles status` and other commands, files you are not interested in tracking will not show up as untracked.
-  </details>
 
 Create your user specific `.gitconfig` for the purpose of setting your git user:
 
