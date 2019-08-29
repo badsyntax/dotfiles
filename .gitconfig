@@ -8,7 +8,7 @@
   default = current
 
 [commit]
-	verbose = true
+  verbose = true
 
 [color "branch"]
   current = yellow bold
