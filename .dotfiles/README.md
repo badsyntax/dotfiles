@@ -59,3 +59,7 @@ Basic, pretty, fast.
 ## vscode settings
 
 See https://github.com/badsyntax/richard-willis-vscode-extension-pack
+
+## Credits
+
+* https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html
