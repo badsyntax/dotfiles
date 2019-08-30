@@ -14,7 +14,8 @@ brew install \
   direnv \
   git-open \
   bash \
-  bash-completion
+  bash-completion \
+  watchman
 ```
 
 Clone the repo to add the dotfiles to your home directory:
