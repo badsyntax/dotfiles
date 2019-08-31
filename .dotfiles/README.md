@@ -55,7 +55,7 @@ _As you can see, the `dotfiles` alias is just git._
 
 Basic, pretty, fast.
 
-![screenshot](/.dotfiles/screenshots/prompt.png)
+![screenshot](.dotfiles/screenshots/prompt.png)
 
 ## vscode settings
 
@@ -63,4 +63,4 @@ See https://github.com/badsyntax/richard-willis-vscode-extension-pack
 
 ## Credits
 
-* https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html
+- https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html

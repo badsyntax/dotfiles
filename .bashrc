@@ -1,23 +1,23 @@
 # shellcheck shell=bash disable=SC1090
 # .bashrc for macOS
 
-function nvm() {
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
+function setup-nvm() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 }
 
 function setup-prompt() {
-  if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+  [ -f "$(brew --prefix)/etc/bash_completion" ] &&
     . "$(brew --prefix)"/etc/bash_completion
-  fi
-  export GIT_PS1_SHOWUNTRACKEDFILES=true
-  export GIT_PS1_SHOWDIRTYSTATE=true
-  export GIT_PS1_SHOWSTASHSTATE=true
-  export GIT_PS1_SHOWCOLORHINTS=true
-  export GIT_PS1_SHOWUPSTREAM="auto"
-  export GIT_PS1_DESCRIBE_STYLE="branch"
-  export PROMPT_DIRTRIM=4
-  export PS1='\[\033[32m\]\u\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n$ '
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWCOLORHINTS=true
+  GIT_PS1_SHOWUPSTREAM="auto"
+  GIT_PS1_DESCRIBE_STYLE="branch"
+  PROMPT_DIRTRIM=4
+  PS1='\[\033[32m\]\u\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n$ '
 }
 
 function setup-aliases() {
@@ -28,7 +28,6 @@ function setup-aliases() {
 function setup-env() {
   export GREP_OPTIONS='--color=always'
   export EDITOR=vim
-  export NVM_DIR="$HOME/.nvm"
   eval "$(direnv hook bash)"
 }
 
@@ -45,5 +44,6 @@ function serve() {
 }
 
 setup-env
+setup-nvm
 setup-aliases
 setup-prompt
