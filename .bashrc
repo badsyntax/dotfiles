@@ -17,7 +17,7 @@ function setup-prompt() {
   GIT_PS1_SHOWUPSTREAM="auto"
   GIT_PS1_DESCRIBE_STYLE="branch"
   PROMPT_DIRTRIM=4
-  PS1='\[\033[32m\]\u\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n$ '
+  PROMPT_COMMAND='__git_ps1 "\[\033[32m\]\u\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]\[\033[00m\]" "\n\$ " " (%s)"'
 }
 
 function setup-aliases() {
