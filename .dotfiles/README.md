@@ -12,6 +12,8 @@ Install deps:
 ```bash
 brew tap homebrew/cask-fonts
 
+brew cask install spectacle
+
 brew install \
   font-fira-code \
   direnv \
